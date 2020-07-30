@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBTI", "MBTI\MBTI.csproj", "{0EFF502E-E3CC-4AAC-8EDB-1720BC91C191}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBTI.Data", "MBTI.Data\MBTI.Data.csproj", "{5B7D2483-0C3E-4695-98AE-A01A67E939D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EFF502E-E3CC-4AAC-8EDB-1720BC91C191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EFF502E-E3CC-4AAC-8EDB-1720BC91C191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EFF502E-E3CC-4AAC-8EDB-1720BC91C191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EFF502E-E3CC-4AAC-8EDB-1720BC91C191}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B7D2483-0C3E-4695-98AE-A01A67E939D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B7D2483-0C3E-4695-98AE-A01A67E939D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B7D2483-0C3E-4695-98AE-A01A67E939D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B7D2483-0C3E-4695-98AE-A01A67E939D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3569566C-17F7-4463-926E-36220E1114D0}
+	EndGlobalSection
+EndGlobal
