@@ -134,7 +134,7 @@
             this.txtTitle1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTitle1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTitle1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtTitle1.Font = new System.Drawing.Font("Pyunji R", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtTitle1.Font = new System.Drawing.Font("Pyunji R", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtTitle1.Location = new System.Drawing.Point(0, 0);
             this.txtTitle1.Name = "txtTitle1";
             this.txtTitle1.Size = new System.Drawing.Size(939, 39);
