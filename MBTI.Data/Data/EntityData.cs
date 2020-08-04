@@ -41,6 +41,12 @@ namespace MBTI.Data
             MBTIEntities context = CreateContext();
             return context.Set<T>().ToList();
         }
+        public int GetCount()
+        {
+            MBTIEntities context = CreateContext();
+
+            return context.Set<T>().Count();
+        }
 
     }
 }
