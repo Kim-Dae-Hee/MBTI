@@ -5,15 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="8ae82586ecad4d7ab1e4fe5912133507" Name="Diagram1">
-        <EntityTypeShape EntityType="MBTIModel.PersonalityType" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MBTIModel.Question" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MBTIModel.Response" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="MBTIModel.Test" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="MBTIModel.User" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
-        <AssociationConnector Association="MBTIModel.FK_Test_PersonalityType" ManuallyRouted="false" />
-        <AssociationConnector Association="MBTIModel.FK_Response_Question" ManuallyRouted="false" />
-        <AssociationConnector Association="MBTIModel.FK_Response_Test" ManuallyRouted="false" />
-        <AssociationConnector Association="MBTIModel.FK_Test_User" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MBTIModel.PersonalityType" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="MBTIModel.Question" Width="1.5" PointX="3" PointY="5.375" />
+        <EntityTypeShape EntityType="MBTIModel.Response" Width="1.5" PointX="5.25" PointY="1.25" />
+        <EntityTypeShape EntityType="MBTIModel.Test" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="MBTIModel.User" Width="1.5" PointX="0.75" PointY="5.375" />
+        <AssociationConnector Association="MBTIModel.FK_Test_PersonalityType" />
+        <AssociationConnector Association="MBTIModel.FK_Response_Question" />
+        <AssociationConnector Association="MBTIModel.FK_Response_Test" />
+        <AssociationConnector Association="MBTIModel.FK_Test_User" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

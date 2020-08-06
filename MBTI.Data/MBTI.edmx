@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MBTIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MBTIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="PersonalityType">
           <Key>
             <PropertyRef Name="Id" />
@@ -49,7 +49,9 @@
           <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <Association Name="FK_Response_Question">
-          <End Role="Question" Type="Self.Question" Multiplicity="1" />
+          <End Role="Question" Type="Self.Question" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Response" Type="Self.Response" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Question">
@@ -61,7 +63,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Response_Test">
-          <End Role="Test" Type="Self.Test" Multiplicity="1" />
+          <End Role="Test" Type="Self.Test" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Response" Type="Self.Response" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Test">
@@ -73,7 +77,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Test_PersonalityType">
-          <End Role="PersonalityType" Type="Self.PersonalityType" Multiplicity="0..1" />
+          <End Role="PersonalityType" Type="Self.PersonalityType" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Test" Type="Self.Test" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PersonalityType">
@@ -121,28 +127,50 @@
             <End Role="Test" EntitySet="Test" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MBTIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MBTIEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PersonalityTypes" EntityType="MBTIModel.PersonalityType" />
+          <EntitySet Name="Questions" EntityType="MBTIModel.Question" />
+          <EntitySet Name="Responses" EntityType="MBTIModel.Response" />
+          <EntitySet Name="Tests" EntityType="MBTIModel.Test" />
+          <EntitySet Name="Users" EntityType="MBTIModel.User" />
+          <AssociationSet Name="FK_Test_PersonalityType" Association="MBTIModel.FK_Test_PersonalityType">
+            <End Role="PersonalityType" EntitySet="PersonalityTypes" />
+            <End Role="Test" EntitySet="Tests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Response_Question" Association="MBTIModel.FK_Response_Question">
+            <End Role="Question" EntitySet="Questions" />
+            <End Role="Response" EntitySet="Responses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Response_Test" Association="MBTIModel.FK_Response_Test">
+            <End Role="Test" EntitySet="Tests" />
+            <End Role="Response" EntitySet="Responses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Test_User" Association="MBTIModel.FK_Test_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Test" EntitySet="Tests" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="PersonalityType">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Characteristic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Tests" Relationship="Self.FK_Test_PersonalityType" FromRole="PersonalityType" ToRole="Test" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Characteristic" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tests" Relationship="MBTIModel.FK_Test_PersonalityType" FromRole="PersonalityType" ToRole="Test" />
         </EntityType>
         <EntityType Name="Question">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Responses" Relationship="Self.FK_Response_Question" FromRole="Question" ToRole="Response" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Responses" Relationship="MBTIModel.FK_Response_Question" FromRole="Question" ToRole="Response" />
         </EntityType>
         <EntityType Name="Response">
           <Key>
@@ -150,10 +178,10 @@
             <PropertyRef Name="QuestionId" />
           </Key>
           <Property Name="TestId" Type="Int32" Nullable="false" />
-          <Property Name="QuestionId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="QuestionId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Grade" Type="Int32" />
-          <NavigationProperty Name="Question" Relationship="Self.FK_Response_Question" FromRole="Response" ToRole="Question" />
-          <NavigationProperty Name="Test" Relationship="Self.FK_Response_Test" FromRole="Response" ToRole="Test" />
+          <NavigationProperty Name="Question" Relationship="MBTIModel.FK_Response_Question" FromRole="Response" ToRole="Question" />
+          <NavigationProperty Name="Test" Relationship="MBTIModel.FK_Response_Test" FromRole="Response" ToRole="Test" />
         </EntityType>
         <EntityType Name="Test">
           <Key>
@@ -164,22 +192,24 @@
           <Property Name="PersonalityTypeId" Type="Int32" />
           <Property Name="StartAt" Type="DateTime" Precision="3" />
           <Property Name="FinishAt" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="PersonalityType" Relationship="Self.FK_Test_PersonalityType" FromRole="Test" ToRole="PersonalityType" />
-          <NavigationProperty Name="Responses" Relationship="Self.FK_Response_Test" FromRole="Test" ToRole="Response" />
-          <NavigationProperty Name="User" Relationship="Self.FK_Test_User" FromRole="Test" ToRole="User" />
+          <NavigationProperty Name="PersonalityType" Relationship="MBTIModel.FK_Test_PersonalityType" FromRole="Test" ToRole="PersonalityType" />
+          <NavigationProperty Name="Responses" Relationship="MBTIModel.FK_Response_Test" FromRole="Test" ToRole="Response" />
+          <NavigationProperty Name="User" Relationship="MBTIModel.FK_Test_User" FromRole="Test" ToRole="User" />
         </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserId" />
           </Key>
           <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Tests" Relationship="Self.FK_Test_User" FromRole="User" ToRole="Test" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tests" Relationship="MBTIModel.FK_Test_User" FromRole="User" ToRole="Test" />
         </EntityType>
         <Association Name="FK_Test_PersonalityType">
-          <End Role="PersonalityType" Type="Self.PersonalityType" Multiplicity="0..1" />
-          <End Role="Test" Type="Self.Test" Multiplicity="*" />
+          <End Type="MBTIModel.PersonalityType" Role="PersonalityType" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="MBTIModel.Test" Role="Test" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PersonalityType">
               <PropertyRef Name="Id" />
@@ -190,8 +220,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Response_Question">
-          <End Role="Question" Type="Self.Question" Multiplicity="1" />
-          <End Role="Response" Type="Self.Response" Multiplicity="*" />
+          <End Type="MBTIModel.Question" Role="Question" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="MBTIModel.Response" Role="Response" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Question">
               <PropertyRef Name="Id" />
@@ -202,8 +234,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Response_Test">
-          <End Role="Test" Type="Self.Test" Multiplicity="1" />
-          <End Role="Response" Type="Self.Response" Multiplicity="*" />
+          <End Type="MBTIModel.Test" Role="Test" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="MBTIModel.Response" Role="Response" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Test">
               <PropertyRef Name="TestId" />
@@ -214,10 +248,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Test_User">
-          <End Role="User" Type="Self.User" Multiplicity="1">
+          <End Type="MBTIModel.User" Role="User" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Test" Type="Self.Test" Multiplicity="*" />
+          <End Type="MBTIModel.Test" Role="Test" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
               <PropertyRef Name="UserId" />
@@ -227,29 +261,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="MBTIEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="PersonalityTypes" EntityType="Self.PersonalityType" />
-          <EntitySet Name="Questions" EntityType="Self.Question" />
-          <EntitySet Name="Responses" EntityType="Self.Response" />
-          <EntitySet Name="Tests" EntityType="Self.Test" />
-          <EntitySet Name="Users" EntityType="Self.User" />
-          <AssociationSet Name="FK_Test_PersonalityType" Association="Self.FK_Test_PersonalityType">
-            <End Role="PersonalityType" EntitySet="PersonalityTypes" />
-            <End Role="Test" EntitySet="Tests" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Response_Question" Association="Self.FK_Response_Question">
-            <End Role="Question" EntitySet="Questions" />
-            <End Role="Response" EntitySet="Responses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Response_Test" Association="Self.FK_Response_Test">
-            <End Role="Test" EntitySet="Tests" />
-            <End Role="Response" EntitySet="Responses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Test_User" Association="Self.FK_Test_User">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Test" EntitySet="Tests" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -259,47 +270,47 @@
           <EntitySetMapping Name="PersonalityTypes">
             <EntityTypeMapping TypeName="MBTIModel.PersonalityType">
               <MappingFragment StoreEntitySet="PersonalityType">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="Characteristic" ColumnName="Characteristic" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Questions">
             <EntityTypeMapping TypeName="MBTIModel.Question">
               <MappingFragment StoreEntitySet="Question">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Text" ColumnName="Text" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Responses">
             <EntityTypeMapping TypeName="MBTIModel.Response">
               <MappingFragment StoreEntitySet="Response">
-                <ScalarProperty Name="TestId" ColumnName="TestId" />
-                <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
                 <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+                <ScalarProperty Name="TestId" ColumnName="TestId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Tests">
             <EntityTypeMapping TypeName="MBTIModel.Test">
               <MappingFragment StoreEntitySet="Test">
-                <ScalarProperty Name="TestId" ColumnName="TestId" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="PersonalityTypeId" ColumnName="PersonalityTypeId" />
-                <ScalarProperty Name="StartAt" ColumnName="StartAt" />
                 <ScalarProperty Name="FinishAt" ColumnName="FinishAt" />
+                <ScalarProperty Name="StartAt" ColumnName="StartAt" />
+                <ScalarProperty Name="PersonalityTypeId" ColumnName="PersonalityTypeId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="TestId" ColumnName="TestId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="MBTIModel.User">
               <MappingFragment StoreEntitySet="User">
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
