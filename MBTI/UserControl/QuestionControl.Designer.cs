@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestionControl));
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnPrevious = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
+            this.btnNext = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.btnFiveB = new MBTI.ButtonNumber();
             this.btnOneA = new MBTI.ButtonNumber();
             this.btnTwoA = new MBTI.ButtonNumber();
@@ -53,11 +58,35 @@
             this.label5.TabIndex = 37;
             this.label5.Text = "1a. 나는 행동에 집착하고 활동과 행동을 지향한다";
             // 
+            // btnPrevious
+            // 
+            windowsUIButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions1.SvgImage")));
+            this.btnPrevious.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton()});
+            this.btnPrevious.Location = new System.Drawing.Point(43, 124);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(75, 81);
+            this.btnPrevious.TabIndex = 65;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // btnNext
+            // 
+            windowsUIButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions2.SvgImage")));
+            this.btnNext.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton()});
+            this.btnNext.Location = new System.Drawing.Point(817, 124);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 81);
+            this.btnNext.TabIndex = 66;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
             // btnFiveB
             // 
             this.btnFiveB.IsChecked = false;
             this.btnFiveB.Label = "5";
-            this.btnFiveB.Location = new System.Drawing.Point(507, 201);
+            this.btnFiveB.Location = new System.Drawing.Point(646, 196);
             this.btnFiveB.Name = "btnFiveB";
             this.btnFiveB.Section = "b";
             this.btnFiveB.Size = new System.Drawing.Size(85, 113);
@@ -68,7 +97,7 @@
             // 
             this.btnOneA.IsChecked = false;
             this.btnOneA.Label = "1";
-            this.btnOneA.Location = new System.Drawing.Point(143, 33);
+            this.btnOneA.Location = new System.Drawing.Point(282, 25);
             this.btnOneA.Name = "btnOneA";
             this.btnOneA.Section = "a";
             this.btnOneA.Size = new System.Drawing.Size(85, 95);
@@ -79,7 +108,7 @@
             // 
             this.btnTwoA.IsChecked = false;
             this.btnTwoA.Label = "2";
-            this.btnTwoA.Location = new System.Drawing.Point(234, 33);
+            this.btnTwoA.Location = new System.Drawing.Point(373, 25);
             this.btnTwoA.Name = "btnTwoA";
             this.btnTwoA.Section = "a";
             this.btnTwoA.Size = new System.Drawing.Size(85, 95);
@@ -90,7 +119,7 @@
             // 
             this.btnThreeA.IsChecked = false;
             this.btnThreeA.Label = "3";
-            this.btnThreeA.Location = new System.Drawing.Point(325, 33);
+            this.btnThreeA.Location = new System.Drawing.Point(464, 25);
             this.btnThreeA.Name = "btnThreeA";
             this.btnThreeA.Section = "a";
             this.btnThreeA.Size = new System.Drawing.Size(85, 95);
@@ -101,7 +130,7 @@
             // 
             this.btnFourA.IsChecked = false;
             this.btnFourA.Label = "4";
-            this.btnFourA.Location = new System.Drawing.Point(416, 33);
+            this.btnFourA.Location = new System.Drawing.Point(555, 25);
             this.btnFourA.Name = "btnFourA";
             this.btnFourA.Section = "a";
             this.btnFourA.Size = new System.Drawing.Size(85, 95);
@@ -112,7 +141,7 @@
             // 
             this.btnZeroB.IsChecked = false;
             this.btnZeroB.Label = "0";
-            this.btnZeroB.Location = new System.Drawing.Point(52, 201);
+            this.btnZeroB.Location = new System.Drawing.Point(191, 196);
             this.btnZeroB.Name = "btnZeroB";
             this.btnZeroB.Section = "b";
             this.btnZeroB.Size = new System.Drawing.Size(85, 113);
@@ -123,7 +152,7 @@
             // 
             this.btnOneB.IsChecked = false;
             this.btnOneB.Label = "1";
-            this.btnOneB.Location = new System.Drawing.Point(143, 201);
+            this.btnOneB.Location = new System.Drawing.Point(282, 196);
             this.btnOneB.Name = "btnOneB";
             this.btnOneB.Section = "b";
             this.btnOneB.Size = new System.Drawing.Size(85, 113);
@@ -134,7 +163,7 @@
             // 
             this.btnTwoB.IsChecked = false;
             this.btnTwoB.Label = "2";
-            this.btnTwoB.Location = new System.Drawing.Point(234, 201);
+            this.btnTwoB.Location = new System.Drawing.Point(373, 196);
             this.btnTwoB.Name = "btnTwoB";
             this.btnTwoB.Section = "b";
             this.btnTwoB.Size = new System.Drawing.Size(85, 113);
@@ -145,7 +174,7 @@
             // 
             this.btnThreeB.IsChecked = false;
             this.btnThreeB.Label = "3";
-            this.btnThreeB.Location = new System.Drawing.Point(325, 201);
+            this.btnThreeB.Location = new System.Drawing.Point(464, 196);
             this.btnThreeB.Name = "btnThreeB";
             this.btnThreeB.Section = "b";
             this.btnThreeB.Size = new System.Drawing.Size(85, 113);
@@ -156,7 +185,7 @@
             // 
             this.btnFourB.IsChecked = false;
             this.btnFourB.Label = "4";
-            this.btnFourB.Location = new System.Drawing.Point(416, 201);
+            this.btnFourB.Location = new System.Drawing.Point(555, 196);
             this.btnFourB.Name = "btnFourB";
             this.btnFourB.Section = "b";
             this.btnFourB.Size = new System.Drawing.Size(85, 113);
@@ -167,7 +196,7 @@
             // 
             this.btnFiveA.IsChecked = false;
             this.btnFiveA.Label = "5";
-            this.btnFiveA.Location = new System.Drawing.Point(507, 33);
+            this.btnFiveA.Location = new System.Drawing.Point(646, 25);
             this.btnFiveA.Name = "btnFiveA";
             this.btnFiveA.Section = "a";
             this.btnFiveA.Size = new System.Drawing.Size(85, 95);
@@ -178,7 +207,7 @@
             // 
             this.btnZeroA.IsChecked = false;
             this.btnZeroA.Label = "0";
-            this.btnZeroA.Location = new System.Drawing.Point(52, 33);
+            this.btnZeroA.Location = new System.Drawing.Point(191, 25);
             this.btnZeroA.Name = "btnZeroA";
             this.btnZeroA.Section = "a";
             this.btnZeroA.Size = new System.Drawing.Size(85, 95);
@@ -189,6 +218,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.btnFiveB);
             this.Controls.Add(this.btnOneA);
             this.Controls.Add(this.btnTwoA);
@@ -203,7 +234,7 @@
             this.Controls.Add(this.btnZeroA);
             this.Controls.Add(this.label5);
             this.Name = "QuestionControl";
-            this.Size = new System.Drawing.Size(677, 357);
+            this.Size = new System.Drawing.Size(916, 357);
             this.Load += new System.EventHandler(this.QuestionControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -225,5 +256,7 @@
         private ButtonNumber btnOneA;
         private ButtonNumber btnFiveB;
         private ButtonNumber btnFourA;
+        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel btnPrevious;
+        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel btnNext;
     }
 }

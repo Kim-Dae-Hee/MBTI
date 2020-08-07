@@ -29,14 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestForm));
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions6 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            this.btnPrevious = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
-            this.btnNext = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
-            this.progressBarControl1 = new DevExpress.XtraEditors.ProgressBarControl();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTimer = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txeQuestionA = new DevExpress.XtraEditors.TextEdit();
@@ -44,67 +39,30 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txeQuestionB = new DevExpress.XtraEditors.TextEdit();
             this.questionControl1 = new MBTI.QuestionControl();
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
+            this.lblProgress = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txeQuestionA.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeQuestionB.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnPrevious
-            // 
-            windowsUIButtonImageOptions5.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions5.SvgImage")));
-            this.btnPrevious.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton()});
-            this.btnPrevious.Location = new System.Drawing.Point(12, 256);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(75, 81);
-            this.btnPrevious.TabIndex = 13;
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
-            // 
-            // btnNext
-            // 
-            windowsUIButtonImageOptions6.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions6.SvgImage")));
-            this.btnNext.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton()});
-            this.btnNext.Location = new System.Drawing.Point(868, 256);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 81);
-            this.btnNext.TabIndex = 14;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // progressBarControl1
-            // 
-            this.progressBarControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.progressBarControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.progressBarControl1.Location = new System.Drawing.Point(399, 521);
-            this.progressBarControl1.Name = "progressBarControl1";
-            this.progressBarControl1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.progressBarControl1.Properties.Maximum = 48;
-            this.progressBarControl1.Properties.PercentView = false;
-            this.progressBarControl1.Properties.ProgressKind = DevExpress.XtraEditors.Controls.ProgressKind.Vertical;
-            this.progressBarControl1.Properties.ShowTitle = true;
-            this.progressBarControl1.Size = new System.Drawing.Size(162, 22);
-            this.progressBarControl1.TabIndex = 15;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(809, 12);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(796, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 18);
+            this.label2.Size = new System.Drawing.Size(55, 24);
             this.label2.TabIndex = 18;
             this.label2.Text = "시간 :";
             // 
-            // label3
+            // lblTimer
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(850, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 23);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "00:00:00";
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.Location = new System.Drawing.Point(850, 9);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(84, 23);
+            this.lblTimer.TabIndex = 22;
+            this.lblTimer.Text = "00:00:00";
             // 
             // timer1
             // 
@@ -170,12 +128,25 @@
             // 
             // questionControl1
             // 
-            this.questionControl1.Location = new System.Drawing.Point(146, 97);
+            this.questionControl1.Location = new System.Drawing.Point(21, 97);
             this.questionControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.questionControl1.Name = "questionControl1";
-            this.questionControl1.Size = new System.Drawing.Size(652, 357);
+            this.questionControl1.Size = new System.Drawing.Size(895, 370);
             this.questionControl1.TabIndex = 25;
             this.questionControl1.ButtonNumberClicked += new System.EventHandler<MBTI.QuestionControl.ButtonNumberClickedEventArgs>(this.questionControl1_ButtonNumberClicked);
+            this.questionControl1.PreviousButtonClicked += new System.EventHandler<MBTI.QuestionControl.PreviousButtonClickedEventArgs>(this.questionControl1_PreviousButtonClicked);
+            this.questionControl1.NextButtonClicked += new System.EventHandler<MBTI.QuestionControl.NextButtonClickedEventArgs>(this.questionControl1_NextButtonClicked);
+            this.questionControl1.TestCreated += new System.EventHandler<MBTI.QuestionControl.TestCreatedEventArgs>(this.questionControl1_TestCreated);
+            // 
+            // lblProgress
+            // 
+            this.lblProgress.AutoSize = true;
+            this.lblProgress.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgress.Location = new System.Drawing.Point(415, 503);
+            this.lblProgress.Name = "lblProgress";
+            this.lblProgress.Size = new System.Drawing.Size(101, 48);
+            this.lblProgress.TabIndex = 32;
+            this.lblProgress.Text = "1/48";
             // 
             // TestForm
             // 
@@ -184,22 +155,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(955, 594);
+            this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txeQuestionB);
             this.Controls.Add(this.txeQuestionA);
             this.Controls.Add(this.questionControl1);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.progressBarControl1);
-            this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.btnPrevious);
             this.Name = "TestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TestForm";
             this.Load += new System.EventHandler(this.TestForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeQuestionA.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeQuestionB.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -208,11 +176,8 @@
         }
 
         #endregion
-        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel btnPrevious;
-        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel btnNext;
-        private DevExpress.XtraEditors.ProgressBarControl progressBarControl1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private QuestionControl questionControl1;
@@ -220,5 +185,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.TextEdit txeQuestionB;
+        private System.Windows.Forms.Label lblProgress;
     }
 }

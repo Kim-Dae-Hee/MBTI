@@ -28,7 +28,7 @@ namespace MBTI.Data
         public virtual DbSet<PersonalityType> PersonalityTypes { get; set; }
         public virtual DbSet<Question> Questions { get; set; }
         public virtual DbSet<Response> Responses { get; set; }
-        public virtual DbSet<Test> Tests { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Test> Tests { get; set; }
     }
 }
