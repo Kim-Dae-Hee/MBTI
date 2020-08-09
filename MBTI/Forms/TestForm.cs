@@ -9,14 +9,13 @@ namespace MBTI.Forms
 {
     public partial class TestForm : XtraForm
     {
-        
+
         private int userId;
-        private int gradeA = -1;
-        private int gradeB = -1;
         private Test test;
         private Stopwatch stopwatch = new Stopwatch();
         StringBuilder time = new StringBuilder();
-
+        private int gradeA;
+        private int gradeB;
         public TestForm()
         {
             InitializeComponent();
@@ -37,10 +36,10 @@ namespace MBTI.Forms
             Timer timer = new Timer();
             timer.Interval = 10;
             timer.Tick += new EventHandler(TimerTick);
-            
+
             stopwatch.Start();
             timer.Start();
-        
+
         }
 
         private void TimerTick(object sender, EventArgs e)
@@ -52,7 +51,7 @@ namespace MBTI.Forms
             int seconds = stopwatch.Elapsed.Seconds;
 
             if (hours < 10)
-                time.Append("0"+hours.ToString());
+                time.Append("0" + hours.ToString());
             else
                 time.Append(hours.ToString());
 
@@ -62,7 +61,7 @@ namespace MBTI.Forms
                 time.Append("0" + minutes.ToString());
             else
                 time.Append(minutes.ToString());
-            
+
             time.Append(":");
 
             if (seconds < 10)
@@ -78,44 +77,58 @@ namespace MBTI.Forms
             Question questionA = DataRepository.Question.Get(questionNumber.ToString() + "a");
             Question questionB = DataRepository.Question.Get(questionNumber.ToString() + "b");
 
-            txeQuestionA.Text = questionA.Id + " " + questionA.Text;
-            txeQuestionB.Text = questionB.Id + " " + questionB.Text;
+            StringBuilder text = new StringBuilder();
+            text.Append(questionA.Id + " " + questionA.Text);
+            txeQuestionA.Text = text.ToString();
+            text.Clear();
+
+            text.Append(questionB.Id + " " + questionB.Text);
+            txeQuestionB.Text = text.ToString();
+            text.Clear();
 
             lblProgress.Text = questionNumber.ToString() + " " + "/ 48";
-
         }
 
-        private void InsertResponse(int questionNumber, string section)
+        private void InsertResponse(int questionNumber, string section, int gradeA, int gradeB)
         {
             Response response = new Response();
             response.TestId = test.TestId;
             response.QuestionId = questionNumber.ToString() + section;
             response.Grade = section == "a" ? gradeA : gradeB;
+            //MessageBox.Show($"{response.QuestionId} {response.Grade}");
             DataRepository.Response.Insert(response);
         }
 
-        private void UpdateResponse(int questionNumber, string section)
+        private void UpdateResponse(int questionNumber, string section, int gradeA, int gradeB)
         {
-            Response response = DataRepository.Response.Get(test.TestId);
-            response.QuestionId = questionNumber.ToString() + section;
+            Response response = DataRepository.Response.Get(test.TestId).Find(x => x.QuestionId == questionNumber.ToString() + section);
             response.Grade = section == "a" ? gradeA : gradeB;
+            //MessageBox.Show($"{response.QuestionId} {response.Grade}");
             DataRepository.Response.Update(response);
         }
 
         private void questionControl1_NextButtonClicked(object sender, QuestionControl.NextButtonClickedEventArgs e)
         {
             QuestionLoad(e.QuestionNumber);
+
             try
             {
-                InsertResponse(e.QuestionNumber - 1, "a");
-                InsertResponse(e.QuestionNumber - 1, "b");
+                InsertResponse(e.QuestionNumber - 1, "a", e.GradeA, e.GradeB);
+                InsertResponse(e.QuestionNumber - 1, "b", e.GradeA, e.GradeB);
             }
             catch
             {
-                UpdateResponse(e.QuestionNumber - 1, "a");
-                UpdateResponse(e.QuestionNumber - 1, "b");
+                UpdateResponse(e.QuestionNumber - 1, "a", e.GradeA, e.GradeB);
+                UpdateResponse(e.QuestionNumber - 1, "b", e.GradeA, e.GradeB);
             }
 
+            if (e.QuestionNumber == 48)
+                btnComplete.Visible = true;
+            else
+                btnComplete.Visible = false;
+
+            gradeA = e.GradeA;
+            gradeB = e.GradeB;
         }
 
         private void questionControl1_ButtonNumberClicked(object sender, QuestionControl.ButtonNumberClickedEventArgs e)
@@ -125,7 +138,7 @@ namespace MBTI.Forms
             else
                 gradeB = int.Parse(e.Label);
         }
-      
+
         private void questionControl1_PreviousButtonClicked(object sender, QuestionControl.PreviousButtonClickedEventArgs e)
         {
             QuestionLoad(e.QuestionNumber);
@@ -140,6 +153,20 @@ namespace MBTI.Forms
             test.StartAt = DateTime.Now;
 
             DataRepository.Test.Update(test);
+        }
+
+        private void btnComplete_Click(object sender, EventArgs e)
+        {
+            if (gradeA + gradeB != 5)
+            {
+                MessageBox.Show("합이 5가 되어야 합니다.");
+                return;
+            }
+
+            ChartResultForm chartResultForm = new ChartResultForm(test);
+            chartResultForm.ShowDialog();
+
+            Close();
         }
     }
 }

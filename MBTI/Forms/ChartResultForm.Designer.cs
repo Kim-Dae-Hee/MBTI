@@ -36,7 +36,6 @@
             DevExpress.XtraCharts.DoughnutSeriesView doughnutSeriesView3 = new DevExpress.XtraCharts.DoughnutSeriesView();
             DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.DoughnutSeriesView doughnutSeriesView4 = new DevExpress.XtraCharts.DoughnutSeriesView();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChartResultForm));
             this.crt1 = new DevExpress.XtraCharts.ChartControl();
             this.btnOk = new System.Windows.Forms.Button();
             this.crt2 = new DevExpress.XtraCharts.ChartControl();
@@ -153,9 +152,9 @@
             this.Controls.Add(this.crt3);
             this.Controls.Add(this.crt2);
             this.Controls.Add(this.crt1);
-            //this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ChartResultForm.IconOptions.SvgImage")));
             this.Name = "ChartResultForm";
             this.Text = "ChartResult";
+            this.Load += new System.EventHandler(this.ChartResultForm_Load);
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crt1)).EndInit();

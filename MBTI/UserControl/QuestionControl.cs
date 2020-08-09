@@ -42,7 +42,7 @@ namespace MBTI
         {
             ClickedButtonNumberClear(e.Section);
             ButtonNumberClick(e.Label, e.Section);
-           
+
             OnButtonNumberClicked(e.Label, e.Section);
         }
 
@@ -112,16 +112,16 @@ namespace MBTI
 
         private void ClickedButtonNumberClear(string section)
         {
-            if(section == "a")
+            if (section == "a")
             {
-                for(int i = 0; i < buttonNumbers.Count / 2; i ++)
+                for (int i = 0; i < buttonNumbers.Count / 2; i++)
                 {
                     buttonNumbers[i].DeActivate();
                 }
             }
             else // section == "b"
             {
-                for(int i = buttonNumbers.Count / 2; i < buttonNumbers.Count; i++)
+                for (int i = buttonNumbers.Count / 2; i < buttonNumbers.Count; i++)
                 {
                     buttonNumbers[i].DeActivate();
                 }
@@ -143,21 +143,36 @@ namespace MBTI
             if (questionNumber == 48)
                 return;
 
-            if(gradeA+gradeB != 5)
+            if (gradeA + gradeB != 5)
             {
                 MessageBox.Show("합이 5가 되어야 합니다.");
                 return;
             }
 
-            ClickedButtonNumberClear("a");
-            ClickedButtonNumberClear("b");
             questionNumber++;
             OnNextButtonClicked(gradeA, gradeB, questionNumber);
+
+            ClickedButtonNumberClear("a");
+            ClickedButtonNumberClear("b");
+
+            List<Response> responses = DataRepository.Response.Get(test.TestId, questionNumber);
+            if (responses.Count == 0)
+            {
+                gradeA = -1;
+                gradeB = -1;
+            }
+            else
+            {
+                foreach (Response response in responses)
+                {
+                    ButtonNumberClick(response.Grade.ToString(), response.QuestionId[1].ToString());
+                }
+            }
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
-            if (questionNumber == 0)
+            if (questionNumber == 1)
                 return;
 
             ClickedButtonNumberClear("a");
@@ -165,10 +180,10 @@ namespace MBTI
             questionNumber--;
 
             List<Response> responses = DataRepository.Response.Get(test.TestId, questionNumber);
-            foreach(Response response in responses)
+            
+            foreach (Response response in responses)
             {
                 ButtonNumberClick(response.Grade.ToString(), response.QuestionId[1].ToString());
-                
             }
 
             OnPreviousButtonClicked(gradeA, gradeB, questionNumber);

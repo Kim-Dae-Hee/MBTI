@@ -25,6 +25,8 @@ namespace MBTI
             TestForm testForm = new TestForm(user.UserId);
             testForm.ShowDialog();
 
+            Close();
+
         }
     }
 }

@@ -40,6 +40,7 @@
             this.txeQuestionB = new DevExpress.XtraEditors.TextEdit();
             this.questionControl1 = new MBTI.QuestionControl();
             this.lblProgress = new System.Windows.Forms.Label();
+            this.btnComplete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txeQuestionA.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeQuestionB.Properties)).BeginInit();
             this.SuspendLayout();
@@ -148,6 +149,20 @@
             this.lblProgress.TabIndex = 32;
             this.lblProgress.Text = "1/48";
             // 
+            // btnComplete
+            // 
+            this.btnComplete.BackColor = System.Drawing.Color.DimGray;
+            this.btnComplete.Font = new System.Drawing.Font("Malgun Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComplete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnComplete.Location = new System.Drawing.Point(776, 489);
+            this.btnComplete.Name = "btnComplete";
+            this.btnComplete.Size = new System.Drawing.Size(149, 72);
+            this.btnComplete.TabIndex = 33;
+            this.btnComplete.Text = "완료";
+            this.btnComplete.UseVisualStyleBackColor = false;
+            this.btnComplete.Visible = false;
+            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
+            // 
             // TestForm
             // 
             this.Appearance.BackColor = System.Drawing.SystemColors.Control;
@@ -155,6 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(955, 594);
+            this.Controls.Add(this.btnComplete);
             this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -186,5 +202,6 @@
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.TextEdit txeQuestionB;
         private System.Windows.Forms.Label lblProgress;
+        private System.Windows.Forms.Button btnComplete;
     }
 }

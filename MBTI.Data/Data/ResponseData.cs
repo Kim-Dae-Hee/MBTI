@@ -15,11 +15,15 @@ namespace MBTI.Data
             return query.ToList();
         }
 
-        public Response Get(int testId)
+        public List<Response> Get(int testId)
         {
             MBTIEntities context = CreateContext();
 
-            return context.Responses.FirstOrDefault(x => x.TestId == testId);
+            var query = from x in context.Responses
+                        where x.TestId == testId  
+                        select x;
+
+            return query.ToList();
         }
 
     }
