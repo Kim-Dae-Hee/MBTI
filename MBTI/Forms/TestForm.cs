@@ -97,6 +97,9 @@ namespace MBTI.Forms
             response.Grade = section == "a" ? gradeA : gradeB;
             //MessageBox.Show($"{response.QuestionId} {response.Grade}");
             DataRepository.Response.Insert(response);
+
+            gradeA = -1;
+            gradeB = -1;
         }
 
         private void UpdateResponse(int questionNumber, string section, int gradeA, int gradeB)
@@ -105,6 +108,7 @@ namespace MBTI.Forms
             response.Grade = section == "a" ? gradeA : gradeB;
             //MessageBox.Show($"{response.QuestionId} {response.Grade}");
             DataRepository.Response.Update(response);
+
         }
 
         private void questionControl1_NextButtonClicked(object sender, QuestionControl.NextButtonClickedEventArgs e)
@@ -163,8 +167,21 @@ namespace MBTI.Forms
                 return;
             }
 
-            ChartResultForm chartResultForm = new ChartResultForm(test);
-            chartResultForm.ShowDialog();
+            try
+            {
+                InsertResponse(48, "a", gradeA, gradeB);
+                InsertResponse(48, "b", gradeA, gradeB);
+            }
+            catch
+            {
+                UpdateResponse(48, "a", gradeA, gradeB);
+                UpdateResponse(48, "b", gradeA, gradeB);
+            }
+
+            /*
+            ResultForm resultForm = new ResultForm(test);
+            resultForm.ShowDialog();
+            */
 
             Close();
         }
