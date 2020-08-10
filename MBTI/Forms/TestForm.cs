@@ -178,10 +178,12 @@ namespace MBTI.Forms
                 UpdateResponse(48, "b", gradeA, gradeB);
             }
 
-            /*
+            test.FinishAt = DateTime.Now;
+
+            DataRepository.Test.Update(test);
+
             ResultForm resultForm = new ResultForm(test);
             resultForm.ShowDialog();
-            */
 
             Close();
         }

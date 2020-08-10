@@ -86,7 +86,7 @@
             // 
             this.btnFiveB.IsChecked = false;
             this.btnFiveB.Label = "5";
-            this.btnFiveB.Location = new System.Drawing.Point(646, 196);
+            this.btnFiveB.Location = new System.Drawing.Point(646, 222);
             this.btnFiveB.Name = "btnFiveB";
             this.btnFiveB.Section = "b";
             this.btnFiveB.Size = new System.Drawing.Size(85, 113);
@@ -141,7 +141,7 @@
             // 
             this.btnZeroB.IsChecked = false;
             this.btnZeroB.Label = "0";
-            this.btnZeroB.Location = new System.Drawing.Point(191, 196);
+            this.btnZeroB.Location = new System.Drawing.Point(191, 222);
             this.btnZeroB.Name = "btnZeroB";
             this.btnZeroB.Section = "b";
             this.btnZeroB.Size = new System.Drawing.Size(85, 113);
@@ -152,7 +152,7 @@
             // 
             this.btnOneB.IsChecked = false;
             this.btnOneB.Label = "1";
-            this.btnOneB.Location = new System.Drawing.Point(282, 196);
+            this.btnOneB.Location = new System.Drawing.Point(282, 222);
             this.btnOneB.Name = "btnOneB";
             this.btnOneB.Section = "b";
             this.btnOneB.Size = new System.Drawing.Size(85, 113);
@@ -163,7 +163,7 @@
             // 
             this.btnTwoB.IsChecked = false;
             this.btnTwoB.Label = "2";
-            this.btnTwoB.Location = new System.Drawing.Point(373, 196);
+            this.btnTwoB.Location = new System.Drawing.Point(373, 222);
             this.btnTwoB.Name = "btnTwoB";
             this.btnTwoB.Section = "b";
             this.btnTwoB.Size = new System.Drawing.Size(85, 113);
@@ -174,7 +174,7 @@
             // 
             this.btnThreeB.IsChecked = false;
             this.btnThreeB.Label = "3";
-            this.btnThreeB.Location = new System.Drawing.Point(464, 196);
+            this.btnThreeB.Location = new System.Drawing.Point(464, 222);
             this.btnThreeB.Name = "btnThreeB";
             this.btnThreeB.Section = "b";
             this.btnThreeB.Size = new System.Drawing.Size(85, 113);
@@ -185,7 +185,7 @@
             // 
             this.btnFourB.IsChecked = false;
             this.btnFourB.Label = "4";
-            this.btnFourB.Location = new System.Drawing.Point(555, 196);
+            this.btnFourB.Location = new System.Drawing.Point(555, 222);
             this.btnFourB.Name = "btnFourB";
             this.btnFourB.Section = "b";
             this.btnFourB.Size = new System.Drawing.Size(85, 113);

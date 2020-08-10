@@ -38,9 +38,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txeQuestionB = new DevExpress.XtraEditors.TextEdit();
-            this.questionControl1 = new MBTI.QuestionControl();
             this.lblProgress = new System.Windows.Forms.Label();
             this.btnComplete = new System.Windows.Forms.Button();
+            this.questionControl1 = new MBTI.QuestionControl();
             ((System.ComponentModel.ISupportInitialize)(this.txeQuestionA.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeQuestionB.Properties)).BeginInit();
             this.SuspendLayout();
@@ -88,62 +88,50 @@
             // txeQuestionA
             // 
             this.txeQuestionA.EditValue = "1a";
-            this.txeQuestionA.Location = new System.Drawing.Point(168, 95);
+            this.txeQuestionA.Location = new System.Drawing.Point(132, 95);
             this.txeQuestionA.Name = "txeQuestionA";
             this.txeQuestionA.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txeQuestionA.Properties.Appearance.Font = new System.Drawing.Font("HYPMokGak-Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txeQuestionA.Properties.Appearance.Font = new System.Drawing.Font("HYPMokGak-Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txeQuestionA.Properties.Appearance.Options.UseBackColor = true;
             this.txeQuestionA.Properties.Appearance.Options.UseFont = true;
             this.txeQuestionA.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.txeQuestionA.Size = new System.Drawing.Size(609, 32);
+            this.txeQuestionA.Size = new System.Drawing.Size(719, 24);
             this.txeQuestionA.TabIndex = 28;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(177, 133);
+            this.panel2.Location = new System.Drawing.Point(132, 129);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(600, 1);
+            this.panel2.Size = new System.Drawing.Size(719, 1);
             this.panel2.TabIndex = 29;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(177, 344);
+            this.panel1.Location = new System.Drawing.Point(132, 369);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 1);
+            this.panel1.Size = new System.Drawing.Size(719, 1);
             this.panel1.TabIndex = 31;
             // 
             // txeQuestionB
             // 
             this.txeQuestionB.EditValue = "1B";
-            this.txeQuestionB.Location = new System.Drawing.Point(177, 306);
+            this.txeQuestionB.Location = new System.Drawing.Point(132, 337);
             this.txeQuestionB.Name = "txeQuestionB";
             this.txeQuestionB.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txeQuestionB.Properties.Appearance.Font = new System.Drawing.Font("HYPMokGak-Bold", 16.2F);
+            this.txeQuestionB.Properties.Appearance.Font = new System.Drawing.Font("HYPMokGak-Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txeQuestionB.Properties.Appearance.Options.UseBackColor = true;
             this.txeQuestionB.Properties.Appearance.Options.UseFont = true;
             this.txeQuestionB.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.txeQuestionB.Size = new System.Drawing.Size(600, 32);
+            this.txeQuestionB.Size = new System.Drawing.Size(719, 24);
             this.txeQuestionB.TabIndex = 30;
-            // 
-            // questionControl1
-            // 
-            this.questionControl1.Location = new System.Drawing.Point(21, 97);
-            this.questionControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.questionControl1.Name = "questionControl1";
-            this.questionControl1.Size = new System.Drawing.Size(895, 370);
-            this.questionControl1.TabIndex = 25;
-            this.questionControl1.ButtonNumberClicked += new System.EventHandler<MBTI.QuestionControl.ButtonNumberClickedEventArgs>(this.questionControl1_ButtonNumberClicked);
-            this.questionControl1.PreviousButtonClicked += new System.EventHandler<MBTI.QuestionControl.PreviousButtonClickedEventArgs>(this.questionControl1_PreviousButtonClicked);
-            this.questionControl1.NextButtonClicked += new System.EventHandler<MBTI.QuestionControl.NextButtonClickedEventArgs>(this.questionControl1_NextButtonClicked);
-            this.questionControl1.TestCreated += new System.EventHandler<MBTI.QuestionControl.TestCreatedEventArgs>(this.questionControl1_TestCreated);
             // 
             // lblProgress
             // 
             this.lblProgress.AutoSize = true;
             this.lblProgress.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProgress.Location = new System.Drawing.Point(415, 503);
+            this.lblProgress.Location = new System.Drawing.Point(416, 503);
             this.lblProgress.Name = "lblProgress";
             this.lblProgress.Size = new System.Drawing.Size(101, 48);
             this.lblProgress.TabIndex = 32;
@@ -162,6 +150,18 @@
             this.btnComplete.UseVisualStyleBackColor = false;
             this.btnComplete.Visible = false;
             this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
+            // 
+            // questionControl1
+            // 
+            this.questionControl1.Location = new System.Drawing.Point(21, 97);
+            this.questionControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.questionControl1.Name = "questionControl1";
+            this.questionControl1.Size = new System.Drawing.Size(895, 385);
+            this.questionControl1.TabIndex = 25;
+            this.questionControl1.ButtonNumberClicked += new System.EventHandler<MBTI.QuestionControl.ButtonNumberClickedEventArgs>(this.questionControl1_ButtonNumberClicked);
+            this.questionControl1.PreviousButtonClicked += new System.EventHandler<MBTI.QuestionControl.PreviousButtonClickedEventArgs>(this.questionControl1_PreviousButtonClicked);
+            this.questionControl1.NextButtonClicked += new System.EventHandler<MBTI.QuestionControl.NextButtonClickedEventArgs>(this.questionControl1_NextButtonClicked);
+            this.questionControl1.TestCreated += new System.EventHandler<MBTI.QuestionControl.TestCreatedEventArgs>(this.questionControl1_TestCreated);
             // 
             // TestForm
             // 

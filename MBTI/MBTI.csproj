@@ -75,7 +75,6 @@
       <DependentUpon>ResultForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\PieChartResultReader.cs" />
-    <Compile Include="Data\TableResultReader.cs" />
     <Compile Include="UserControl\ButtonNumber.cs">
       <SubType>UserControl</SubType>
     </Compile>
