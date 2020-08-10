@@ -21,7 +21,7 @@ namespace MBTI.Data
         }
     
         public int TestId { get; set; }
-        public int UserId { get; set; }
+        public Nullable<int> UserId { get; set; }
         public Nullable<int> PersonalityTypeId { get; set; }
         public Nullable<System.DateTime> StartAt { get; set; }
         public Nullable<System.DateTime> FinishAt { get; set; }
