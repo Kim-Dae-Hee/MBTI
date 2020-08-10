@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txeName = new DevExpress.XtraEditors.TextEdit();
-            this.txeMail = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txeMail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -60,25 +60,25 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "이메일 :";
             // 
-            // txeName
+            // textEdit1
             // 
-            this.txeName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txeName.Location = new System.Drawing.Point(223, 106);
-            this.txeName.Name = "txeName";
-            this.txeName.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txeName.Properties.Appearance.Options.UseBackColor = true;
-            this.txeName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.txeName.Size = new System.Drawing.Size(197, 26);
-            this.txeName.TabIndex = 3;
+            this.textEdit1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textEdit1.Location = new System.Drawing.Point(223, 106);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.textEdit1.Size = new System.Drawing.Size(113, 26);
+            this.textEdit1.TabIndex = 3;
             // 
-            // txeMail
+            // textEdit2
             // 
-            this.txeMail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txeMail.Location = new System.Drawing.Point(223, 136);
-            this.txeMail.Name = "txeMail";
-            this.txeMail.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.txeMail.Size = new System.Drawing.Size(197, 26);
-            this.txeMail.TabIndex = 4;
+            this.textEdit2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textEdit2.Location = new System.Drawing.Point(223, 136);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.textEdit2.Size = new System.Drawing.Size(197, 26);
+            this.textEdit2.TabIndex = 4;
             // 
             // richTextBox1
             // 
@@ -117,7 +117,6 @@
             this.simpleButton1.Size = new System.Drawing.Size(123, 42);
             this.simpleButton1.TabIndex = 6;
             this.simpleButton1.Text = "검사 시작";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // label3
             // 
@@ -139,20 +138,21 @@
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.txeMail);
-            this.Controls.Add(this.txeName);
+            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
+         //   this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("StartForm.IconOptions.SvgImage")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(585, 770);
+            this.MaximumSize = new System.Drawing.Size(577, 770);
             this.MinimizeBox = false;
             this.Name = "StartForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MBTI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txeMail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,8 +161,8 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.TextEdit txeName;
-        private DevExpress.XtraEditors.TextEdit txeMail;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit textEdit2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox richTextBox1;
