@@ -153,7 +153,7 @@
             this.Controls.Add(this.crt3);
             this.Controls.Add(this.crt2);
             this.Controls.Add(this.crt1);
-            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ChartResultForm.IconOptions.SvgImage")));
+//            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ChartResultForm.IconOptions.SvgImage")));
             this.Name = "ChartResultForm";
             this.Text = "ChartResult";
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).EndInit();

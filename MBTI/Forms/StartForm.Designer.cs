@@ -142,7 +142,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
-            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("StartForm.IconOptions.SvgImage")));
+         //   this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("StartForm.IconOptions.SvgImage")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(577, 770);
             this.MinimizeBox = false;
