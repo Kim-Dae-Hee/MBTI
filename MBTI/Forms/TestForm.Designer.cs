@@ -116,7 +116,7 @@
             // 
             // txeQuestionB
             // 
-            this.txeQuestionB.EditValue = "1B";
+            this.txeQuestionB.EditValue = "1b";
             this.txeQuestionB.Location = new System.Drawing.Point(132, 337);
             this.txeQuestionB.Name = "txeQuestionB";
             this.txeQuestionB.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
@@ -131,7 +131,7 @@
             // 
             this.lblProgress.AutoSize = true;
             this.lblProgress.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProgress.Location = new System.Drawing.Point(416, 503);
+            this.lblProgress.Location = new System.Drawing.Point(428, 503);
             this.lblProgress.Name = "lblProgress";
             this.lblProgress.Size = new System.Drawing.Size(101, 48);
             this.lblProgress.TabIndex = 32;

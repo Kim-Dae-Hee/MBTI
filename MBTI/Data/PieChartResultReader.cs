@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MBTI
 {
-    public class PieChartResult
+    public class PieChartResultReader
     {
         public string Type { get; set; }
         public int Grade { get; set; }

@@ -372,19 +372,19 @@
             // 
             // bdsSection4
             // 
-            this.bdsSection4.DataSource = typeof(MBTI.PieChartResult);
+            this.bdsSection4.DataSource = typeof(MBTI.PieChartResultReader);
             // 
             // bdsSection3
             // 
-            this.bdsSection3.DataSource = typeof(MBTI.PieChartResult);
+            this.bdsSection3.DataSource = typeof(MBTI.PieChartResultReader);
             // 
             // bdsSection2
             // 
-            this.bdsSection2.DataSource = typeof(MBTI.PieChartResult);
+            this.bdsSection2.DataSource = typeof(MBTI.PieChartResultReader);
             // 
             // bdsSection1
             // 
-            this.bdsSection1.DataSource = typeof(MBTI.PieChartResult);
+            this.bdsSection1.DataSource = typeof(MBTI.PieChartResultReader);
             // 
             // ResultForm
             // 

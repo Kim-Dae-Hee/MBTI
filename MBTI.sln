@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBTI.Api", "MBTI.Api\MBTI.A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{5A5261F9-DFF3-4501-9720-954957C7E06C}"
 	ProjectSection(SolutionItems) = preProject
-		ReadMe.md = ReadMe.md
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Global

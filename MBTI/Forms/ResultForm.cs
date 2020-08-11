@@ -95,14 +95,14 @@ namespace MBTI
 
         private void ShowPieChart(Dictionary<string, int> sumGrades)
         {
-            List<PieChartResult> resultSection1 = new List<PieChartResult>();
-            List<PieChartResult> resultSection2 = new List<PieChartResult>();
-            List<PieChartResult> resultSection3 = new List<PieChartResult>();
-            List<PieChartResult> resultSection4 = new List<PieChartResult>();
+            List<PieChartResultReader> resultSection1 = new List<PieChartResultReader>();
+            List<PieChartResultReader> resultSection2 = new List<PieChartResultReader>();
+            List<PieChartResultReader> resultSection3 = new List<PieChartResultReader>();
+            List<PieChartResultReader> resultSection4 = new List<PieChartResultReader>();
 
             foreach (string key in sumGrades.Keys)
             {
-                PieChartResult resultReader = new PieChartResult();
+                PieChartResultReader resultReader = new PieChartResultReader();
                 resultReader.Type = key;
                 resultReader.Grade = sumGrades[key];
 
