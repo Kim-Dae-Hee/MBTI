@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel5 = new DevExpress.XtraCharts.PieSeriesLabel();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView9 = new DevExpress.XtraCharts.PieSeriesView();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView10 = new DevExpress.XtraCharts.PieSeriesView();
-            DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel6 = new DevExpress.XtraCharts.PieSeriesLabel();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView11 = new DevExpress.XtraCharts.PieSeriesView();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView12 = new DevExpress.XtraCharts.PieSeriesView();
-            DevExpress.XtraCharts.Series series7 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel7 = new DevExpress.XtraCharts.PieSeriesLabel();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView13 = new DevExpress.XtraCharts.PieSeriesView();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView14 = new DevExpress.XtraCharts.PieSeriesView();
-            DevExpress.XtraCharts.Series series8 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel8 = new DevExpress.XtraCharts.PieSeriesLabel();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView15 = new DevExpress.XtraCharts.PieSeriesView();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView16 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel1 = new DevExpress.XtraCharts.PieSeriesLabel();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView2 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel2 = new DevExpress.XtraCharts.PieSeriesLabel();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView3 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView4 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel3 = new DevExpress.XtraCharts.PieSeriesLabel();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView5 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView6 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel4 = new DevExpress.XtraCharts.PieSeriesLabel();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView7 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView8 = new DevExpress.XtraCharts.PieSeriesView();
             this.label3 = new System.Windows.Forms.Label();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -53,7 +53,8 @@
             this.chartControl3 = new DevExpress.XtraCharts.ChartControl();
             this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCharacteristic = new System.Windows.Forms.Label();
+            this.lblType = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvResult = new System.Windows.Forms.DataGridView();
             this.E = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,34 +65,33 @@
             this.F = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.J = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.P = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblType = new System.Windows.Forms.Label();
-            this.lblCharacteristic = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.bdsSection4 = new System.Windows.Forms.BindingSource(this.components);
             this.bdsSection3 = new System.Windows.Forms.BindingSource(this.components);
             this.bdsSection2 = new System.Windows.Forms.BindingSource(this.components);
             this.bdsSection1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView8)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsSection4)).BeginInit();
@@ -120,17 +120,17 @@
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.Location = new System.Drawing.Point(164, 71);
             this.chartControl1.Name = "chartControl1";
-            series5.ArgumentDataMember = "Type";
-            pieSeriesLabel5.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            pieSeriesLabel5.TextPattern = "{A} : {VP:0%}";
-            series5.Label = pieSeriesLabel5;
-            series5.Name = "Series 1";
-            series5.ValueDataMembersSerializable = "Grade";
-            series5.View = pieSeriesView9;
+            series1.ArgumentDataMember = "Type";
+            pieSeriesLabel1.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            pieSeriesLabel1.TextPattern = "{A} : {VP:0%}";
+            series1.Label = pieSeriesLabel1;
+            series1.Name = "Series 1";
+            series1.ValueDataMembersSerializable = "Grade";
+            series1.View = pieSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series5};
+        series1};
             this.chartControl1.SeriesTemplate.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl1.SeriesTemplate.View = pieSeriesView10;
+            this.chartControl1.SeriesTemplate.View = pieSeriesView2;
             this.chartControl1.Size = new System.Drawing.Size(350, 250);
             this.chartControl1.TabIndex = 9;
             // 
@@ -169,17 +169,17 @@
             this.chartControl4.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl4.Location = new System.Drawing.Point(664, 378);
             this.chartControl4.Name = "chartControl4";
-            series6.ArgumentDataMember = "Type";
-            pieSeriesLabel6.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold);
-            pieSeriesLabel6.TextPattern = "{A} : {VP:0%}";
-            series6.Label = pieSeriesLabel6;
-            series6.Name = "Series 1";
-            series6.ValueDataMembersSerializable = "Grade";
-            series6.View = pieSeriesView11;
+            series2.ArgumentDataMember = "Type";
+            pieSeriesLabel2.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold);
+            pieSeriesLabel2.TextPattern = "{A} : {VP:0%}";
+            series2.Label = pieSeriesLabel2;
+            series2.Name = "Series 1";
+            series2.ValueDataMembersSerializable = "Grade";
+            series2.View = pieSeriesView3;
             this.chartControl4.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series6};
+        series2};
             this.chartControl4.SeriesTemplate.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl4.SeriesTemplate.View = pieSeriesView12;
+            this.chartControl4.SeriesTemplate.View = pieSeriesView4;
             this.chartControl4.Size = new System.Drawing.Size(350, 250);
             this.chartControl4.TabIndex = 12;
             // 
@@ -191,17 +191,17 @@
             this.chartControl3.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl3.Location = new System.Drawing.Point(165, 378);
             this.chartControl3.Name = "chartControl3";
-            series7.ArgumentDataMember = "Type";
-            pieSeriesLabel7.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold);
-            pieSeriesLabel7.TextPattern = "{A} : {VP:0%}";
-            series7.Label = pieSeriesLabel7;
-            series7.Name = "Series 1";
-            series7.ValueDataMembersSerializable = "Grade";
-            series7.View = pieSeriesView13;
+            series3.ArgumentDataMember = "Type";
+            pieSeriesLabel3.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold);
+            pieSeriesLabel3.TextPattern = "{A} : {VP:0%}";
+            series3.Label = pieSeriesLabel3;
+            series3.Name = "Series 1";
+            series3.ValueDataMembersSerializable = "Grade";
+            series3.View = pieSeriesView5;
             this.chartControl3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series7};
+        series3};
             this.chartControl3.SeriesTemplate.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl3.SeriesTemplate.View = pieSeriesView14;
+            this.chartControl3.SeriesTemplate.View = pieSeriesView6;
             this.chartControl3.Size = new System.Drawing.Size(350, 250);
             this.chartControl3.TabIndex = 11;
             // 
@@ -213,17 +213,17 @@
             this.chartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl2.Location = new System.Drawing.Point(661, 69);
             this.chartControl2.Name = "chartControl2";
-            series8.ArgumentDataMember = "Type";
-            pieSeriesLabel8.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold);
-            pieSeriesLabel8.TextPattern = "{A} : {VP:0%}";
-            series8.Label = pieSeriesLabel8;
-            series8.Name = "Series 1";
-            series8.ValueDataMembersSerializable = "Grade";
-            series8.View = pieSeriesView15;
+            series4.ArgumentDataMember = "Type";
+            pieSeriesLabel4.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold);
+            pieSeriesLabel4.TextPattern = "{A} : {VP:0%}";
+            series4.Label = pieSeriesLabel4;
+            series4.Name = "Series 1";
+            series4.ValueDataMembersSerializable = "Grade";
+            series4.View = pieSeriesView7;
             this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series8};
+        series4};
             this.chartControl2.SeriesTemplate.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl2.SeriesTemplate.View = pieSeriesView16;
+            this.chartControl2.SeriesTemplate.View = pieSeriesView8;
             this.chartControl2.Size = new System.Drawing.Size(350, 250);
             this.chartControl2.TabIndex = 10;
             // 
@@ -242,17 +242,26 @@
             this.tabPage2.Text = "표";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lblCharacteristic
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Font = new System.Drawing.Font("Pyunji R", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Image = global::MBTI.Properties.Resources.결과;
-            this.label2.Location = new System.Drawing.Point(26, 191);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1093, 204);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "                          ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCharacteristic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCharacteristic.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblCharacteristic.Location = new System.Drawing.Point(225, 479);
+            this.lblCharacteristic.Name = "lblCharacteristic";
+            this.lblCharacteristic.Size = new System.Drawing.Size(700, 153);
+            this.lblCharacteristic.TabIndex = 12;
+            this.lblCharacteristic.Text = "Characteristic";
+            // 
+            // lblType
+            // 
+            this.lblType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblType.Font = new System.Drawing.Font("Malgun Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblType.Location = new System.Drawing.Point(434, 397);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(286, 52);
+            this.lblType.TabIndex = 11;
+            this.lblType.Text = "Type                ";
+            this.lblType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -349,26 +358,17 @@
             this.P.Name = "P";
             this.P.ReadOnly = true;
             // 
-            // lblType
+            // label2
             // 
-            this.lblType.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblType.Font = new System.Drawing.Font("Malgun Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblType.Location = new System.Drawing.Point(434, 397);
-            this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(286, 52);
-            this.lblType.TabIndex = 11;
-            this.lblType.Text = "Type                ";
-            this.lblType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCharacteristic
-            // 
-            this.lblCharacteristic.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCharacteristic.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblCharacteristic.Location = new System.Drawing.Point(225, 479);
-            this.lblCharacteristic.Name = "lblCharacteristic";
-            this.lblCharacteristic.Size = new System.Drawing.Size(700, 153);
-            this.lblCharacteristic.TabIndex = 12;
-            this.lblCharacteristic.Text = "Characteristic";
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Pyunji R", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Image = global::MBTI.Properties.Resources.결과;
+            this.label2.Location = new System.Drawing.Point(26, 191);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1093, 204);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "                          ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bdsSection4
             // 
@@ -395,28 +395,28 @@
             this.Name = "ResultForm";
             this.Text = "ResultForm";
             this.Load += new System.EventHandler(this.ResultForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();

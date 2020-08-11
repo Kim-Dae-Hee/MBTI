@@ -93,6 +93,7 @@
     <Compile Include="Response.cs">
       <DependentUpon>MBTI.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\Simulation.cs" />
     <Compile Include="Test.cs">
       <DependentUpon>MBTI.tt</DependentUpon>
     </Compile>

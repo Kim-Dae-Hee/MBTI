@@ -33,7 +33,7 @@
             // 
             // btnNumber
             // 
-            this.btnNumber.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnNumber.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnNumber.Font = new System.Drawing.Font("NanumGothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnNumber.Location = new System.Drawing.Point(3, 18);
             this.btnNumber.Name = "btnNumber";

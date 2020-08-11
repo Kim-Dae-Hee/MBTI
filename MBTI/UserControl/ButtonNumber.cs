@@ -35,7 +35,7 @@ namespace MBTI
 
         public void DeActivate()
         {
-            btnNumber.BackColor = Color.Aquamarine;
+            btnNumber.BackColor = Color.MediumTurquoise;
             IsChecked = false;
         }
 

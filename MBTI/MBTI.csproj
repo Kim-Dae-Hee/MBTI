@@ -75,17 +75,18 @@
       <DependentUpon>ResultForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\PieChartResultReader.cs" />
+    <Compile Include="Forms\SimulationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SimulationForm.Designer.cs">
+      <DependentUpon>SimulationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SimulationReader.cs" />
     <Compile Include="UserControl\ButtonNumber.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControl\ButtonNumber.Designer.cs">
       <DependentUpon>ButtonNumber.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\StartForm.cs">
       <SubType>Form</SubType>
@@ -107,11 +108,11 @@
     <Compile Include="UserControl\QuestionControl.Designer.cs">
       <DependentUpon>QuestionControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ResultForm.resx">
       <DependentUpon>ResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SimulationForm.resx">
+      <DependentUpon>SimulationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ButtonNumber.resx">
       <DependentUpon>ButtonNumber.cs</DependentUpon>
@@ -138,6 +139,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ResultReader.datasource" />
+    <None Include="Properties\DataSources\SimulationReader.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

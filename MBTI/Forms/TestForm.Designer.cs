@@ -140,11 +140,11 @@
             // btnComplete
             // 
             this.btnComplete.BackColor = System.Drawing.Color.DimGray;
-            this.btnComplete.Font = new System.Drawing.Font("Malgun Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComplete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnComplete.Location = new System.Drawing.Point(776, 489);
+            this.btnComplete.Font = new System.Drawing.Font("Malgun Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnComplete.ForeColor = System.Drawing.Color.White;
+            this.btnComplete.Location = new System.Drawing.Point(815, 516);
             this.btnComplete.Name = "btnComplete";
-            this.btnComplete.Size = new System.Drawing.Size(149, 72);
+            this.btnComplete.Size = new System.Drawing.Size(110, 48);
             this.btnComplete.TabIndex = 33;
             this.btnComplete.Text = "완료";
             this.btnComplete.UseVisualStyleBackColor = false;
@@ -153,7 +153,7 @@
             // 
             // questionControl1
             // 
-            this.questionControl1.Location = new System.Drawing.Point(21, 97);
+            this.questionControl1.Location = new System.Drawing.Point(30, 97);
             this.questionControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.questionControl1.Name = "questionControl1";
             this.questionControl1.Size = new System.Drawing.Size(895, 385);
