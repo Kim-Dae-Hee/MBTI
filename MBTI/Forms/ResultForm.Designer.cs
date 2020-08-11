@@ -55,6 +55,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lblCharacteristic = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvResult = new System.Windows.Forms.DataGridView();
             this.E = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +66,6 @@
             this.F = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.J = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.P = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
             this.bdsSection4 = new System.Windows.Forms.BindingSource(this.components);
             this.bdsSection3 = new System.Windows.Forms.BindingSource(this.components);
             this.bdsSection2 = new System.Windows.Forms.BindingSource(this.components);
@@ -263,6 +263,18 @@
             this.lblType.Text = "Type                ";
             this.lblType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Pyunji R", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Image = global::MBTI.Properties.Resources.결과;
+            this.label2.Location = new System.Drawing.Point(26, 191);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1093, 204);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "                          ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -357,18 +369,6 @@
             this.P.MinimumWidth = 6;
             this.P.Name = "P";
             this.P.ReadOnly = true;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Font = new System.Drawing.Font("Pyunji R", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Image = global::MBTI.Properties.Resources.결과;
-            this.label2.Location = new System.Drawing.Point(26, 191);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1093, 204);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "                          ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bdsSection4
             // 

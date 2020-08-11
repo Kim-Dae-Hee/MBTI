@@ -34,7 +34,7 @@
             this.txeName = new DevExpress.XtraEditors.TextEdit();
             this.txeMail = new DevExpress.XtraEditors.TextEdit();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnStart = new DevExpress.XtraEditors.SimpleButton();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeMail.Properties)).BeginInit();
@@ -93,30 +93,31 @@
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
-            // simpleButton1
+            // btnStart
             // 
-            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.DimGray;
-            this.simpleButton1.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.AppearanceDisabled.BorderColor = System.Drawing.SystemColors.Control;
-            this.simpleButton1.AppearanceDisabled.Options.UseBorderColor = true;
-            this.simpleButton1.AppearanceHovered.BackColor = System.Drawing.Color.Teal;
-            this.simpleButton1.AppearanceHovered.ForeColor = System.Drawing.Color.White;
-            this.simpleButton1.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton1.AppearanceHovered.Options.UseForeColor = true;
-            this.simpleButton1.AppearancePressed.BackColor = System.Drawing.Color.SeaGreen;
-            this.simpleButton1.AppearancePressed.ForeColor = System.Drawing.Color.White;
-            this.simpleButton1.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton1.AppearancePressed.Options.UseForeColor = true;
-            this.simpleButton1.Location = new System.Drawing.Point(223, 639);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(123, 42);
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "검사 시작";
+            this.btnStart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnStart.Appearance.BackColor = System.Drawing.Color.DimGray;
+            this.btnStart.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.btnStart.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.btnStart.Appearance.Options.UseBackColor = true;
+            this.btnStart.Appearance.Options.UseFont = true;
+            this.btnStart.AppearanceDisabled.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnStart.AppearanceDisabled.Options.UseBorderColor = true;
+            this.btnStart.AppearanceHovered.BackColor = System.Drawing.Color.Teal;
+            this.btnStart.AppearanceHovered.ForeColor = System.Drawing.Color.White;
+            this.btnStart.AppearanceHovered.Options.UseBackColor = true;
+            this.btnStart.AppearanceHovered.Options.UseForeColor = true;
+            this.btnStart.AppearancePressed.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnStart.AppearancePressed.ForeColor = System.Drawing.Color.White;
+            this.btnStart.AppearancePressed.Options.UseBackColor = true;
+            this.btnStart.AppearancePressed.Options.UseForeColor = true;
+            this.btnStart.Location = new System.Drawing.Point(223, 639);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(123, 42);
+            this.btnStart.TabIndex = 6;
+            this.btnStart.Text = "검사 시작";
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // label3
             // 
@@ -135,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 730);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.txeMail);
@@ -162,7 +163,7 @@
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.TextEdit txeName;
         private DevExpress.XtraEditors.TextEdit txeMail;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnStart;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox richTextBox1;
     }

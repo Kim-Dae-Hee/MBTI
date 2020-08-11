@@ -10,11 +10,10 @@ namespace MBTI
             InitializeComponent();
         }
 
-        private void simpleButton1_Click(object sender, System.EventArgs e)
+        private void btnStart_Click(object sender, System.EventArgs e)
         {
-            
             User user = DataRepository.User.Get(txeName.Text, txeMail.Text);
-            if(user == null)
+            if (user == null)
             {
                 user = new User();
                 user.Name = txeName.Text;
@@ -26,7 +25,6 @@ namespace MBTI
             testForm.ShowDialog();
 
             Close();
-
         }
     }
 }
